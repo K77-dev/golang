@@ -1,5 +1,11 @@
 package golang
 
+import (
+	"io"
+	"net/http"
+	"regexp"
+)
+
 func titulo(urls ...string) <-chan string {
 	c := make(chan string)
 	for _, url := range urls {
